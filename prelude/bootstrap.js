@@ -1203,10 +1203,10 @@ function payloadFileSync (pointer) {
     path = normalizePath(path);
     // console.log("internalModuleReadFile", path);
     var entity = VIRTUAL_FILESYSTEM[path];
-    if (!entity) return [undefined, undefined];
+    if (!entity) return [ undefined, undefined ];
     var entityContent = entity[STORE_CONTENT];
-    if (!entityContent) return [undefined, undefined];
-    return [payloadFileSync(entityContent).toString(), true];
+    if (!entityContent) return [ undefined, undefined ];
+    return [ payloadFileSync(entityContent).toString(), true ];
   };
 }());
 
